@@ -1,0 +1,30 @@
+Goal - predict my door to door commute time for any given day
+
+dataset: my location history
+
+features: 
+- day of month
+- day of week
+- month of year
+- year
+- time left house
+- commute direction
+- commute time
+
+feature generation:
+  for each day of data, grab all points close to home and close to work. order chronologically. coalesce to find candidate commutes. drop any commute that takes less than 30 minutes or more than 3.5 hours. 
+
+
+== Installation steps ==
+
+ 1. Download your location data from Google Takeout
+ 2. Set your Home and Work locations in settings.py
+ 3. Install virtualenv
+ 4. Run ./setup-virtualenv.sh
+ 5. Generate features by running ./generate_features.py
+ 6. Train by running ./train.py
+ 7. Predict for right now with ./predict.py
+
+== Extras ==
+
+ * see stats with ./stats.py (need to have generated features first)

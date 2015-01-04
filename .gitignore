@@ -1,0 +1,6 @@
+LocationHistory.json
+features.json
+commute_model.pkl*
+predictions.csv
+*.pyc
+virtualenv/
